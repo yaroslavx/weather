@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/weather/static/css/main.7a274a4c.css",
+    "main.js": "/weather/static/js/main.cce5fc89.js",
+    "static/media/desert.jpg": "/weather/static/media/desert.7918a3d568faedf1ac37.jpg",
+    "index.html": "/weather/index.html",
+    "main.7a274a4c.css.map": "/weather/static/css/main.7a274a4c.css.map",
+    "main.cce5fc89.js.map": "/weather/static/js/main.cce5fc89.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7a274a4c.css",
+    "static/js/main.cce5fc89.js"
+  ]
+}
