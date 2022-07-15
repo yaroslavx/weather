@@ -20,12 +20,13 @@ code {
     monospace;
 }
 
-h1 {
+h1, .blanc_h1 {
   font-size: 6rem;
 }
 
-p {
+p, .blanc {
   font-size: 1.6rem;
+
 }
 
 .app {
@@ -33,7 +34,7 @@ p {
   height: 100vh;
   position: relative;
   background-color: rgba(0, 0, 0, 0.4);
-  color: white;
+  color: whitesmoke;
 }
 
 .app::before {
@@ -57,11 +58,18 @@ p {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  -webkit-animation: fadein 2s; 
+  -moz-animation: fadein 2s; 
+   -ms-animation: fadein 2s; 
+    -o-animation: fadein 2s; 
+       animation: fadein 2s;
 }
 
 .app .top {
   width: 100%;
-  margin: 1rem auto
+  margin: 1rem auto;
+
+  
 }
 
 .app .bottom {
@@ -74,3 +82,33 @@ p {
   border-radius: 7px;
   padding: 1rem;
 }
+
+
+p, span, h1 {
+  -webkit-animation: fadein 2s; 
+  -moz-animation: fadein 2s; 
+   -ms-animation: fadein 2s; 
+    -o-animation: fadein 2s; 
+       animation: fadein 2s;
+}
+
+@keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@-moz-keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@-webkit-keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@-ms-keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
