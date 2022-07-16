@@ -26,18 +26,18 @@ h1, .blanc_h1 {
 
 p, .blanc {
   font-size: 1.6rem;
-
 }
 
-.app {
+.main, .maps {
   width: 100%;
   height: 100vh;
   position: relative;
   background-color: rgba(0, 0, 0, 0.4);
   color: whitesmoke;
+
 }
 
-.app::before {
+.main::before, .maps:before {
   content: '';
   background: url('./assets/desert.jpg') no-repeat center center/cover;
   position: absolute;
@@ -65,16 +65,15 @@ p, .blanc {
        animation: fadein 2s;
 }
 
-.app .top {
+.main .top {
   width: 100%;
   margin: 1rem auto;
-
-  
 }
 
-.app .bottom {
+.main .bottom {
   background-color: rgba(255, 255, 255, 0.0);
   display: flex;
+  flex-direction: column;
   justify-content: space-evenly;
   text-align: center;
   width: 100%;
@@ -82,7 +81,6 @@ p, .blanc {
   border-radius: 7px;
   padding: 1rem;
 }
-
 
 p, span, h1 {
   -webkit-animation: fadein 2s; 

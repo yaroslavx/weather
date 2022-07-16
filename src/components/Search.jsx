@@ -10,10 +10,8 @@ const Search = ({getData}) => {
   
     const searchCity = (e) => {
         if (true) {
-            // console.log(document.getElementById('searched').value)
             axios.get(url)
             .then(response => getData(response.data))
-            .then(() => console.log(document.getElementById('searched').value))
         }         
     }
 
