@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/weather/static/css/main.a873322e.css",
-    "main.js": "/weather/static/js/main.ae9425c8.js",
+    "main.js": "/weather/static/js/main.6950d50b.js",
     "static/media/desert.jpg": "/weather/static/media/desert.7918a3d568faedf1ac37.jpg",
     "index.html": "/weather/index.html",
     "main.a873322e.css.map": "/weather/static/css/main.a873322e.css.map",
-    "main.ae9425c8.js.map": "/weather/static/js/main.ae9425c8.js.map"
+    "main.6950d50b.js.map": "/weather/static/js/main.6950d50b.js.map"
   },
   "entrypoints": [
     "static/css/main.a873322e.css",
-    "static/js/main.ae9425c8.js"
+    "static/js/main.6950d50b.js"
   ]
 }
