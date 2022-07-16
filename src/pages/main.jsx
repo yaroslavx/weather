@@ -2,6 +2,7 @@ import React from "react";
 import { useState } from "react";
 import Search from "../components/Search";
 import Details from "../components/Details";
+import { Link } from "react-router-dom";
 
 export default function Main() { 
   
