@@ -23,7 +23,7 @@ export default function Main() {
                 {(data.name) ? <p>{data.name}</p> : <div className="blanc">Location</div>}
               </div>
               <div className="temp">
-                {(data.main && data.weather) ? <div style={{display:"flex", alignItems:"center"}}><h1>{data.main.temp.toFixed() + "°C"}</h1> <img src={`http://openweathermap.org/img/wn/${data.weather[0].icon}@4x.png`}/></div>: <div className="blanc_h1">Temp</div>}
+                {(data.main && data.weather) ? <div style={{display:"flex", alignItems:"center"}}><h1>{data.main.temp.toFixed() + "°C"}</h1><img src={`http://openweathermap.org/img/wn/10n@4x.png`}/></div>: <div style={{display:"flex", alignItems:"center"}}><div className="blanc_h1">Temp</div><div style={{width:"200px", height:"200px"}}></div></div>}
               </div>
               <div className="description">
                 {(data.weather) ? <p>{data.weather[0].description}</p> : <div className="blanc">Description</div>}
