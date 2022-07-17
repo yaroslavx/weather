@@ -14,8 +14,8 @@ export default function Details({data}) {
 
   function timeConverter(UNIX_timestamp){
     var a = new Date(UNIX_timestamp * 1000);
-    var hours = a.getHours();
-    var minutes = a.getMinutes() < 10 ? '0' + a.getMinutes() : a.getMinutes()
+    var hours = a.getUTCHours();
+    var minutes = a.getUTCMinutes() < 10 ? '0' + a.getUTCMinutes() : a.getUTCMinutes()
     var time = hours + ':' + minutes
     return time;
   }
@@ -33,7 +33,7 @@ export default function Details({data}) {
                 <span>Humidity</span>
               </div>
               <div className="wind">
-                {(data.wind) ? <p>{Math.round(data.wind.speed) + " MS"}</p> : <p>N/A</p>}
+                {(data.wind) ? <p>{Math.round(data.wind.speed) + "MS"}</p> : <p>N/A</p>}
                 <span>Wind speed</span>
               </div>
           </div>
@@ -42,7 +42,7 @@ export default function Details({data}) {
           <Fragment>
             <div className={cl.bottom}>
               <div className="pressure">
-                {(data.main) ? <p>{data.main.pressure.toFixed() + " hPa"}</p> : <p>N/A</p>}
+                {(data.main) ? <p>{data.main.pressure.toFixed() + "HPA"}</p> : <p>N/A</p>}
                 <span>Pressure</span>
               </div>
               <div className="maxtemp">
@@ -56,15 +56,15 @@ export default function Details({data}) {
             </div>
             <div className={cl.bottom}>
               <div className="extra">
-                {(data.weather) ? <p>{data.weather[0].description}</p> : <p>N/A</p>}
-                <span>Extra</span>
+                {(data.visibility) ? <p>{(data.visibility/1000).toFixed() + "KM"}</p> : <p>N/A</p>}
+                <span>Visibility</span>
               </div>
               <div className="sunrise">
-                {(data.sys) ? <p>{timeConverter(data.sys.sunrise)}</p> : <p>N/A</p>}
+                {(data.sys) ? <p>{timeConverter(data.sys.sunrise+data.timezone)}</p> : <p>N/A</p>}
                 <span>Sunrise</span>
               </div>
               <div className="sunset">
-                {(data.sys) ? <p>{timeConverter(data.sys.sunset)}</p> : <p>N/A</p>}
+                {(data.sys) ? <p>{timeConverter(data.sys.sunset+data.timezone)}</p> : <p>N/A</p>}
                 <span>Sunset</span>
               </div>
             </div>
