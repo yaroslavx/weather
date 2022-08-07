@@ -26,7 +26,7 @@ export default function Main() {
                 {(data.main && data.weather) ? <h1>{data.main.temp.toFixed() + "°C"}</h1>: <div className="blanc_h1">Temp</div>}
               </div>
               <div className="description">
-                {(data.weather) ? <div style={{display:"flex", alignItems:"center"}}><p>{data.weather[0].description}</p><img src={`http://openweathermap.org/img/wn/10n@2x.png`}/></div> : <div style={{display:"flex", alignItems:"center"}}><div className="blanc">Description</div><div style={{width:"100px", height:"100px"}}></div></div>}
+                {(data.weather) ? <div style={{display:"flex", alignItems:"center"}}><p>{data.weather[0].description}</p><div style={{width: "50px", height:"100px"}}></div></div> : <div style={{display:"flex", alignItems:"center"}}><div className="blanc">Description</div><div style={{width:"100px", height:"100px"}}></div></div>}
               </div>
             </div>
             {data.name != undefined && 
